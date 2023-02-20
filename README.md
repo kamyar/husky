@@ -21,7 +21,7 @@ It needs two permissions:
     - Configured shortcuts
 - History
   - Show you suggestions from links you have visited
-    - this will be made optional due make the extension more privacy friendly
+    - this will be made optional to make the extension more privacy friendly
 
 ## Install (With an option to build)
 

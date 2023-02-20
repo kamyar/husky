@@ -11,14 +11,19 @@ jobs:
         node-version: 16
     - run: yarn install --frozen-lockfile
     - run: yarn package --zip
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: ncipollo/release-action@v1
       with:
+        name: Release ${{ github.ref }}
         artifacts: "build/chrome-mv3-prod.zip"
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        draft: false
-        prerelease: false
+        tag: ${{ github.event.repository.updated_at }}
+#     - name: Create Release
+#       id: create_release
+#       uses: actions/create-release@v1
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       with:
+#         artifacts: "build/chrome-mv3-prod.zip"
+#         tag_name: ${{ github.ref }}
+#         release_name: Release ${{ github.ref }}
+#         draft: false
+#         prerelease: false

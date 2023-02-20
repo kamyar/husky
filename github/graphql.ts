@@ -1,8 +1,8 @@
 
 
-
-export const QUERY_OWNER_PRS = `{
-    search(query: "is:open is:pr archived:false sort:updated-desc author:@me user:creditornot", type: ISSUE, first: 100) {
+// TODO: Find a proper way to do this and auto generate graphql types maybe
+export const QUERY_OWNER_PRS = (githubOrg: string) => `{
+    search(query: "is:open is:pr archived:false sort:updated-desc author:@me user:${githubOrg}", type: ISSUE, first: 100) {
         issueCount
         edges {
             node {
@@ -38,8 +38,8 @@ export const QUERY_OWNER_PRS = `{
         }
     }
 }`
-export const QUERY_OWNER_ISSUES = `{
-  search(query: "user:creditornot assignee:@me state:open sort:updated-desc", type: ISSUE, first: 100) {
+export const QUERY_OWNER_ISSUES = (githubOrg: string) => `{
+  search(query: "user:${githubOrg} assignee:@me state:open sort:updated-desc", type: ISSUE, first: 100) {
     issueCount
       edges {
           node {

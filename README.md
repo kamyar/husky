@@ -25,7 +25,7 @@ It needs two permissions:
 
 ## Install (With an option to build)
 
-You can either download a prebuilt release from the right side or can build it yourself with:
+You can either download a prebuilt release from [here](https://github.com/kamyar/husky/releases/latest) or can build it yourself with:
 
 ```
 git clone git@github.com:kamyar/husky.git
@@ -55,10 +55,6 @@ pnpm build
 # or
 npm run build
 ```
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
 
 ## TODO
 

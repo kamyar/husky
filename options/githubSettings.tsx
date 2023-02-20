@@ -16,6 +16,7 @@ interface GithubSettingsProps {
     setToken: (string) => void
 }
 
+// TODO: make org configurable
 export default function GithubSettings(props: GithubSettingsProps) {
   const [showPassword, setShowPassword] = useState<boolean>(false)
 
@@ -56,12 +57,12 @@ export default function GithubSettings(props: GithubSettingsProps) {
         />
         <br />
         {!props.token &&
-        <Alert  severity="warning">
-          By adding a valid Github token, you can see all PRs you are involved in the new tab page.
-          <br />
-          <Link href="https://github.com/settings/tokens/new">Visit her</Link> to define a token with `repo` scope, copy and set it here and then enable SSO for any Github Org <br />
-           you might want to see PRs from.
-        </Alert>
+          <Alert  severity="warning">
+            By adding a valid Github token, you can see all PRs you are involved in the new tab page.
+            <br />
+            <Link href="https://github.com/settings/tokens/new">Visit her</Link> to define a token with `repo` scope, copy and set it here and then enable SSO for any Github Org <br />
+            you might want to see PRs from.
+          </Alert>
         }
       </FormControl>
     </Box>

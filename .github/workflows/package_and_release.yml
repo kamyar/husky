@@ -20,8 +20,8 @@ jobs:
     - name: Create annotation for build error
       run: git tag ${{ env.RELEASE_NAME }}
     - run: yarn package --zip
-    - run: ls build/
     - run: ls *
+    - run: ls */*
     - uses: ncipollo/release-action@v1
       with:
         name: Release ${{ env.RELEASE_NAME }}

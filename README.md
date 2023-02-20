@@ -1,10 +1,9 @@
-<div style="text-align:center">
-<img align="center" width="33%" src="assets/icon.png">
-
-</div>
-<div style="text-align:center">
-Husky is a productivity extension
-</div>
+<p align="center">
+    <img align="center" width="33%" src="assets/icon.png">
+</p>
+<p align="center">
+    Husky is a productivity extension
+</p>
 
 ## Feature
 

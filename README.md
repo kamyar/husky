@@ -8,12 +8,24 @@
 ## Feature
 
 - Quick glance at Github PRs and Issues
-- Omnibox shortcuts
+- Omnibox shortcuts (e.g. `hs <your keyword>` takes you to whatever address you have configured)
 - ... More to come
 
-## Install
+_**Husky respects your privacy and does not collect any data.**_
 
-Release packages will be added later to the Release section but for now if you are interested you can build it yourself:
+It needs two permissions:
+
+- Storage
+  - Store settings locally
+    - Github token
+    - Configured shortcuts
+- History
+  - Show you suggestions from links you have visited
+    - this will be made optional due make the extension more privacy friendly
+
+## Install (With an option to build)
+
+You can either download a prebuilt release from the right side or can build it yourself with:
 
 ```
 git clone git@github.com:kamyar/husky.git
@@ -50,12 +62,10 @@ The easiest way to deploy your Plasmo extension is to use the built-in [bpp](htt
 
 ## TODO
 
-#### Shortcuts:
-
 - [x] Show suggestions from history
-- [ ] Make option definition better with automatic schema
-- [ ] Support remote json files as config
-
-#### Other:
-
-- [ ] Add support for key shortcuts
+- [ ] Support remote json files as shortcut config
+  - Make it possible to load either personal or company shortcuts easily
+- [ ] Add support for keyboard shortcuts
+- [ ] Improve styling (AKA Stop procrastinating and write those CSS 🎨)
+- [ ] Add demo of the app
+- Create an issue if you have a suggestion.

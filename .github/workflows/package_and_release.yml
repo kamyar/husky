@@ -1,0 +1,40 @@
+name: Build Release
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build extension
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: yarn
+    - run: yarn install --frozen-lockfile
+    - name: set release date
+      run: echo "RELEASE_NAME=v$(date +%Y-%m-%d_%H-%M-%S)" >> ${GITHUB_ENV}
+    - name: Create annotation for build error
+      run: git tag ${{ env.RELEASE_NAME }}
+    - run: yarn build
+    - run: yarn package --zip
+    - run: ls *
+    - uses: ncipollo/release-action@v1
+      with:
+        name: Release ${{ env.RELEASE_NAME }}
+        artifacts: "build/chrome-mv3-prod.zip"
+        tag: ${{ env.RELEASE_NAME }}
+#     - name: Create Release
+#       id: create_release
+#       uses: actions/create-release@v1
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       with:
+#         artifacts: "build/chrome-mv3-prod.zip"
+#         tag_name: ${{ github.ref }}
+#         release_name: Release ${{ github.ref }}
+#         draft: false
+#         prerelease: false

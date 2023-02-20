@@ -25,6 +25,7 @@ jobs:
         name: Release ${{ github.ref }}
         artifacts: "build/chrome-mv3-prod.zip"
         tag: ${{ env.RELEASE_NAME }}
+        release_name: ${{ env.RELEASE_NAME }}
 #     - name: Create Release
 #       id: create_release
 #       uses: actions/create-release@v1

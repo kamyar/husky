@@ -1,0 +1,24 @@
+name: Build Release
+on: [workflow_dispatch]
+jobs:
+  build:
+    name: Build extension
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - run: yarn install --frozen-lockfile
+    - run: yarn package --zip
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        artifacts: "build/chrome-mv3-prod.zip"
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false

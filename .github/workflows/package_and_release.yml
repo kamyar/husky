@@ -19,9 +19,9 @@ jobs:
       run: echo "RELEASE_NAME=v$(date +%Y-%m-%d_%H-%M-%S)" >> ${GITHUB_ENV}
     - name: Create annotation for build error
       run: git tag ${{ env.RELEASE_NAME }}
+    - run: yarn build
     - run: yarn package --zip
     - run: ls *
-    - run: ls */*
     - uses: ncipollo/release-action@v1
       with:
         name: Release ${{ env.RELEASE_NAME }}

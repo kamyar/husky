@@ -1,5 +1,9 @@
 name: Build Release
-on: [workflow_dispatch]
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 jobs:
   build:
     name: Build extension
@@ -15,7 +19,7 @@ jobs:
       with:
         name: Release ${{ github.ref }}
         artifacts: "build/chrome-mv3-prod.zip"
-        tag: ${{ github.event.repository.updated_at }}
+        tag: test-tag
 #     - name: Create Release
 #       id: create_release
 #       uses: actions/create-release@v1

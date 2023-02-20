@@ -16,16 +16,17 @@ jobs:
         cache: yarn
     - run: yarn install --frozen-lockfile
     - name: set release date
-      run: echo "RELEASE_NAME=$(date +%Y-%m-%d_%H-%M-%S)" >> ${GITHUB_ENV}
+      run: echo "RELEASE_NAME=v$(date +%Y-%m-%d_%H-%M-%S)" >> ${GITHUB_ENV}
     - name: Create annotation for build error
       run: git tag ${{ env.RELEASE_NAME }}
     - run: yarn package --zip
+    - run: ls build/
+    - run: ls *
     - uses: ncipollo/release-action@v1
       with:
-        name: Release ${{ github.ref }}
-        artifacts: "build/chrome-mv3-prod.zip"
+        name: Release ${{ env.RELEASE_NAME }}
+        artifacts: "build/*"
         tag: ${{ env.RELEASE_NAME }}
-        release_name: ${{ env.RELEASE_NAME }}
 #     - name: Create Release
 #       id: create_release
 #       uses: actions/create-release@v1

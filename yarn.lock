@@ -1987,10 +1987,10 @@
   resolved "https://registry.yarnpkg.com/@types/btoa-lite/-/btoa-lite-1.0.0.tgz#e190a5a548e0b348adb0df9ac7fa5f1151c7cca4"
   integrity sha512-wJsiX1tosQ+J5+bY5LrSahHxr2wT+uME5UDwdN1kg4frt40euqA+wzECkmq4t5QbveHiJepfdThgQrPw6KiSlg==
 
-"@types/chrome@0.0.210":
-  version "0.0.210"
-  resolved "https://registry.npmjs.org/@types/chrome/-/chrome-0.0.210.tgz"
-  integrity sha512-VSjQu1k6a/rAfuqR1Gi/oxHZj4+t6+LG+GobNI3ZWI6DQ+fmphNSF6TrLHG6BYK2bXc9Gb4c1uXFKRRVLaGl5Q==
+"@types/chrome@0.0.226":
+  version "0.0.226"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.226.tgz#db6fc9a0476718156f97917a3b25e3f876f5bc7e"
+  integrity sha512-cyl2Bt/P3xPH4arxHctNbzksO20hirQCL3Jcqz6mOZKgad7SkhqRqc7BL9EWVRvocs6hyo8bwkzKidTlM8WGUw==
   dependencies:
     "@types/filesystem" "*"
     "@types/har-format" "*"

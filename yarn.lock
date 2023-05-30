@@ -1967,13 +1967,12 @@
     lodash.clone "4.5.0"
     lodash.isequal "4.5.0"
 
-"@plasmohq/storage@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/@plasmohq/storage/-/storage-1.0.5.tgz"
-  integrity sha512-zxgB/53Tidr1S6cFguOGyZns439bo8p5srxRh2UPEJvDi/Ickh+ATpDAWfQUsC/TPEQEM/+1IXI0IkYlePKqfw==
+"@plasmohq/storage@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@plasmohq/storage/-/storage-1.6.1.tgz#5af0b128f5d79aa996a292302fa7c8f444a9b5c8"
+  integrity sha512-FgykO3m5YhOBA/xANpsLTGGKkBD1uVmymnG7aMck4BS962Tz+bDv476NFVoSrOtduadBpRFTsBAsyXUMdY8YKA==
   dependencies:
-    "@types/webextension-polyfill" "0.10.0"
-    webextension-polyfill "0.10.0"
+    pify "6.1.0"
 
 "@pnpm/network.ca-file@^1.0.1":
   version "1.0.2"
@@ -2227,11 +2226,6 @@
   version "7.3.13"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.3.13.tgz#da4bfd73f49bd541d28920ab0e2bf0ee80f71c91"
   integrity sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==
-
-"@types/webextension-polyfill@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.npmjs.org/@types/webextension-polyfill/-/webextension-polyfill-0.10.0.tgz"
-  integrity sha512-If4EcaHzYTqcbNMp/FdReVdRmLL/Te42ivnJII551bYjhX19bWem5m14FERCqdJA732OloGuxCRvLBvcMGsn4A==
 
 "@typescript-eslint/eslint-plugin@^5.57.1":
   version "5.57.1"
@@ -5185,6 +5179,11 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
+pify@6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/pify/-/pify-6.1.0.tgz#db9f2ebfba65f0bc144db65ae84d1a486ab72909"
+  integrity sha512-KocF8ve28eFjjuBKKGvzOBGzG8ew2OqOOSxTTZhirkzH7h3BI1vyzqlR0qbfcDBve1Yzo3FVlWUAtCRrbVN8Fw==
+
 pify@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/pify/-/pify-4.0.1.tgz"
@@ -6213,11 +6212,6 @@ weak-lru-cache@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/weak-lru-cache/-/weak-lru-cache-1.2.2.tgz"
   integrity sha512-DEAoo25RfSYMuTGc9vPJzZcZullwIqRDSI9LOy+fkCJPi6hykCnfKaXTuPBDuXAUcqHXyOgFtHNp/kB2FjYHbw==
-
-webextension-polyfill@0.10.0:
-  version "0.10.0"
-  resolved "https://registry.npmjs.org/webextension-polyfill/-/webextension-polyfill-0.10.0.tgz"
-  integrity sha512-c5s35LgVa5tFaHhrZDnr3FpQpjj1BB+RXhLTYUxGqBVN460HkbM8TBtEqdXWbpTKfzwCcjAZVF7zXCYSKtcp9g==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"

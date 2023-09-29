@@ -39,7 +39,8 @@
       "https://*/*"
     ],
     "permissions": [
-      "history"
+      "history",
+      "scripting"
     ],
     "omnibox": {
       "keyword": "hs"
